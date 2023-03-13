@@ -79,39 +79,17 @@
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
                 <version>4.7.2.1</version>
-                <dependencies>
-                    <!-- overwrite dependency on spotbugs if you want to specify the version of spotbugs -->
-                    <dependency>
-                        <groupId>com.github.spotbugs</groupId>
-                        <artifactId>spotbugs</artifactId>
-                        <version>4.7.3</version>
-                    </dependency>
-                </dependencies>
-
-                <!-- Настроить goal check в фазу verify -->
-
-                <!-- Подскажите пожалуйста, что нужно сделать. Задание со звёздочкой не хочется пропускать или хотя бы увидеть код - то чно надо было сделать.
-                На текущий момент не хватает знаний и понимания где получить эту информацию.
-                Очень хочется задать вопрос словами или увидеть, что нужно сделать на примере, чтобы увидеть и понять закономерность.
-                Если не сложно можно пример или хотябы ссылку. Пожалуйста. -->
-
-                <execution>
-                    <id>report</id>
-                    <phase>verify</phase>
-                    <goals>
-                        <goal>report</goal>
-                    </goals>
-                </execution>
-                <execution>
-                    <id>check</id>
-                    <goals>
-                        <goal>check</goal>
-                    </goals>
-
-                </execution>
+                <executions>
+                    <execution>
+                        <id>check</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
 
 
-
+                </executions>
 
             </plugin>
         </plugins>
